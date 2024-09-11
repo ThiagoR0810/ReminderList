@@ -13,7 +13,7 @@ const ReminderList = ({ reminders, onDelete }) => {
     }
 
     const formatDate = (dateArray) => {
-        return moment(dateArray).format('DD/MM/YYYY');
+        return moment(dateArray).subtract(1, 'months').format('DD/MM/YYYY');
     };
 
     useEffect(groupRemindersByDate, [reminders])
