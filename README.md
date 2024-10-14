@@ -21,15 +21,14 @@ Este é um site de gerenciamento de tarefas que permite aos usuários criar tare
   - Spring MVC (Model-View-Controller)
   - Spring Data JPA (para persistência)
   - Spring Security (opcional, para autenticação)
-- **Banco de dados H2** (ou MySQL, Postgres)
+- **Banco de dados H2** 
 - **Maven** (para gerenciamento de dependências)
 
 ### Frontend (React)
 - **React 18+**
 - **JavaScript (ES6+)**
-- **Axios** (para requisições HTTP)
 - **React Router** (para navegação entre páginas)
-- **Bootstrap** (ou outro framework CSS para estilização)
+- **Styled Components**
 
 ## Arquitetura
 
@@ -47,43 +46,6 @@ A arquitetura do projeto é dividida em duas camadas principais:
 - O frontend consome a API REST fornecida pelo backend para gerenciar e exibir as tarefas.
 - A lista de tarefas é exibida em uma interface ordenada e agrupada por data, permitindo uma navegação amigável para os usuários.
 
-## Estrutura do Projeto
-
-### Backend (Java Spring Boot)
-```
-/src/main/java/com/example/project
-│
-├── controller
-│   └── TaskController.java        # Controlador REST para tarefas
-│
-├── model
-│   └── Task.java                  # Entidade de Tarefa
-│
-├── repository
-│   └── TaskRepository.java        # Interface de persistência (Spring Data JPA)
-│
-├── service
-│   └── TaskService.java           # Regras de negócio para tarefas
-│
-└── Application.java               # Classe principal da aplicação
-```
-
-### Frontend (React)
-```
-/src
-│
-├── components
-│   ├── TaskForm.js                # Formulário para criação de nova tarefa
-│   ├── TaskList.js                # Lista de tarefas, agrupadas e ordenadas por data
-│   └── TaskItem.js                # Componente individual para exibir uma tarefa
-│
-├── services
-│   └── TaskService.js             # Serviço para consumo da API REST (usando Axios)
-│
-├── App.js                         # Componente principal da aplicação
-└── index.js                       # Ponto de entrada da aplicação
-```
-
 ## Configuração e Execução
 
 ### Backend
@@ -91,7 +53,7 @@ A arquitetura do projeto é dividida em duas camadas principais:
 1. **Pré-requisitos**: Instalar Java 17+ e Maven.
 2. Clone o repositório:
    ```bash
-   git clone https://github.com/usuario/repositorio-backend.git
+   git clone https://github.com/ThiagoR0810/ToDoList.git
    ```
 3. Entre no diretório do projeto e execute:
    ```bash
@@ -105,7 +67,7 @@ A arquitetura do projeto é dividida em duas camadas principais:
 1. **Pré-requisitos**: Instalar Node.js e npm.
 2. Clone o repositório:
    ```bash
-   git clone https://github.com/usuario/repositorio-frontend.git
+   git clone https://github.com/ThiagoR0810/ToDoList.git
    ```
 3. Instale as dependências:
    ```bash
@@ -125,20 +87,3 @@ A arquitetura do projeto é dividida em duas camadas principais:
 | POST   | /api/tasks       | Cria uma nova tarefa                    |
 | DELETE | /api/tasks/{id}  | Remove uma tarefa pelo ID               |
 
-### Exemplo de requisição usando Axios
-
-```javascript
-import axios from 'axios';
-
-axios.get('/api/tasks')
-  .then(response => {
-    console.log(response.data);
-  })
-  .catch(error => {
-    console.error('Erro ao buscar tarefas:', error);
-  });
-```
-
-## Licença
-
-Este projeto está licenciado sob a licença MIT. Consulte o arquivo LICENSE para mais detalhes.
