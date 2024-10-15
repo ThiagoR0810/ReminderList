@@ -53,7 +53,7 @@ A arquitetura do projeto é dividida em duas camadas principais:
 1. **Pré-requisitos**: Instalar Java 17+ e Maven.
 2. Clone o repositório:
    ```bash
-   git clone https://github.com/ThiagoR0810/ToDoList.git
+   git clone https://github.com/ThiagoR0810/ToDoList/back-end.git
    ```
 3. Entre no diretório do projeto e execute:
    ```bash
@@ -67,7 +67,7 @@ A arquitetura do projeto é dividida em duas camadas principais:
 1. **Pré-requisitos**: Instalar Node.js e npm.
 2. Clone o repositório:
    ```bash
-   git clone https://github.com/ThiagoR0810/ToDoList.git
+   git clone https://github.com/ThiagoR0810/ToDoList/front-end.git
    ```
 3. Instale as dependências:
    ```bash
